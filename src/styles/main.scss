@@ -1,3 +1,9 @@
-@import 'normalize.css';
-@import './fonts.scss';
-@import './base.scss';
+@import "normalize.css";
+
+@import "./base/fonts";
+@import "./utils/variables";
+@import "./utils/text-mixins";
+
+@import "./base/base";
+
+@import "./layouts/header";
