@@ -1,6 +1,7 @@
 @mixin header1-text {
     font-family: Play;
-    font-size: 9.41vh; //80px
+    // font-size: 9.41vh; //80px
+    font-size: min(9.41vh, 5.56vw); //80px
     font-weight: 700;
     line-height: 1.05em; /* 84px */
     text-transform: uppercase;

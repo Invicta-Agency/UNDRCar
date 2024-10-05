@@ -8,6 +8,7 @@
     border-radius: 5.56rem;
     overflow: hidden;
     margin: 2.35vh auto;
+    z-index: 5;
 
     &__nav {
         transform: translateX(-100%);
@@ -35,7 +36,6 @@
     display: flex;
 }
 .logo {
-    // width: 3.61rem;
     width: 7.66vh;
 }
 .vertical-line {
@@ -45,7 +45,5 @@
     background-color: $gray-color;
 }
 .link {
-    color: $white-color;
-    text-decoration: none;
     white-space: nowrap;
 }
