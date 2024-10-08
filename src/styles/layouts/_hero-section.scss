@@ -1,35 +1,39 @@
 .hero-section {
     position: relative;
-    width: 100vw;
-    height: 100vh;
     overflow: hidden;
 
-    &__content {
-        position: absolute;
-        bottom: 0;
-        padding: 4.12vh;
-        width: 100%;
-    }
-
     &__header {
-        color: #ffffffb2;
+        position: absolute;
+        top: 41.88%;
+        left: 50%;
+        transform: translateX(-50%);
         text-align: center;
-        max-width: 72%;
-        margin: 0 auto 11.18vh;
+        color: #ffffffb2;
+        width: min(118.4vh, 69.86vw);
+        user-select: none;
     }
 
-    &__contacts-btn {
-        @include caption-text;
-        display: block;
-        float: right;
-        clear: both;
-        padding: 0.39rem 0.83rem;
-        border: 1px solid $gray-color;
-        border-radius: 1.67rem;
-
-        &:not(:last-child) {
-            margin-bottom: 1.18vh;
-        }
+    &__side-buttons {
+        position: absolute;
+        top: 1.18vh;
+        bottom: 1.18vh;
+        left: 1.18vh;
+        background-color: #00000080;
+        backdrop-filter: blur(2px);
+        border-radius: 1.76vh;
+        padding: 2.94vh 1.88vh 2.35vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.12vh;
+    }
+    &__menu-icon {
+        flex-grow: 1;
+    }
+    &__contacts-link {
+        padding: 1.18vh;
+        border: 1px solid $dark-gray-color;
+        border-radius: 50%;
     }
 }
 #hero-section__bg-video {

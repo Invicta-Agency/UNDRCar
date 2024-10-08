@@ -1,0 +1,13 @@
+.icon {
+    cursor: pointer;
+    outline: none;
+    width: 2.82vh;
+    display: block;
+
+    &:hover path {
+        stroke: aqua;
+    }
+    &:focus-visible:not(:active) {
+        border: 2px solid rgb(0, 204, 255);
+    }
+}
