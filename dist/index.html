@@ -1,46 +1,93 @@
 <!doctype html>
-<html lang="uk">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" href="/UNDRCar/assets/logo-Cc7XkXmd.svg" />
+        <link rel="icon" href="/UNDRCar/assets/logo-CQF11iI6.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
         <title>UNDRCar</title>
-      <script type="module" crossorigin src="/UNDRCar/assets/index-BIlK8MC6.js"></script>
-      <link rel="stylesheet" crossorigin href="/UNDRCar/assets/index-BLkgubT8.css">
+      <script type="module" crossorigin src="/UNDRCar/assets/index-BJGZ_6lu.js"></script>
+      <link rel="stylesheet" crossorigin href="/UNDRCar/assets/index-j0S4LLtV.css">
     </head>
 
     <body>
-        <div class="body-wrapper">
-            <header class="header">
-                <div class="blur-bg"></div>
-                <div class="header__nav">
-                    <a href="/" class="logo-wrapper">
-                        <img src="/UNDRCar/assets/logo-Cc7XkXmd.svg" alt="logo" class="logo" />
-                    </a>
-                    <hr class="vertical-line" />
-                    <ul class="header__menu">
-                        <li><a href="" class="link">Головна</a></li>
-                        <li><a href="" class="link">Про нас</a></li>
-                        <li><a href="" class="link">Послуги</a></li>
-                        <li><a href="" class="link">Галерея</a></li>
-                        <li><a href="" class="link">Контакти</a></li>
-                    </ul>
-                </div>
-            </header>
-            <main>
-                <section class="hero-section">
-                    <video autoplay muted loop id="hero-section__bg-video">
-                        <source src="/UNDRCar/assets/hero-section-bg-video-BqZHwACw.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="hero-section__content">
-                        <h1 class="hero-section__header">Керуйте автомобілем з упевненістю, решту залиште нам</h1>
-                        <a href="" class="hero-section__contacts-btn">Instagram</a
-                        ><a href="" class="hero-section__contacts-btn">Email</a
-                        ><a href="" class="hero-section__contacts-btn">Phone</a>
+        <main class="main" id="main">
+            <section class="menu-section">
+                <div class="menu-section__menu-buttons">
+                    <div class="menu-section__menu-icon">
+                        <svg
+                            width="27"
+                            height="21"
+                            viewBox="0 0 27 21"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-stroke"
+                            tabindex="0"
+                        >
+                            <path d="M1 1.24707H26" stroke="#F6F6F6" stroke-width="2" stroke-linecap="round" />
+                            <path d="M1 10.2471H26" stroke="#F6F6F6" stroke-width="2" stroke-linecap="round" />
+                            <path d="M1 19.2471H20" stroke="#F6F6F6" stroke-width="2" stroke-linecap="round" />
+                        </svg>
                     </div>
-                </section>
-            </main>
-        </div>
+                    <a href="" class="menu-section__contacts-link">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="25"
+                            viewBox="0 0 24 25"
+                            fill="none"
+                            class="icon icon-fill"
+                        >
+                            <path
+                                d="M7.8 2.61182H16.2C19.4 2.61182 22 5.21182 22 8.41182V16.8118C22 18.3501 21.3889 19.8253 20.3012 20.913C19.2135 22.0007 17.7383 22.6118 16.2 22.6118H7.8C4.6 22.6118 2 20.0118 2 16.8118V8.41182C2 6.87356 2.61107 5.39831 3.69878 4.3106C4.78649 3.22289 6.26174 2.61182 7.8 2.61182ZM7.6 4.61182C6.64522 4.61182 5.72955 4.9911 5.05442 5.66623C4.37928 6.34136 4 7.25704 4 8.21182V17.0118C4 19.0018 5.61 20.6118 7.6 20.6118H16.4C17.3548 20.6118 18.2705 20.2325 18.9456 19.5574C19.6207 18.8823 20 17.9666 20 17.0118V8.21182C20 6.22182 18.39 4.61182 16.4 4.61182H7.6ZM17.25 6.11182C17.5815 6.11182 17.8995 6.24351 18.1339 6.47793C18.3683 6.71235 18.5 7.0303 18.5 7.36182C18.5 7.69334 18.3683 8.01128 18.1339 8.2457C17.8995 8.48012 17.5815 8.61182 17.25 8.61182C16.9185 8.61182 16.6005 8.48012 16.3661 8.2457C16.1317 8.01128 16 7.69334 16 7.36182C16 7.0303 16.1317 6.71235 16.3661 6.47793C16.6005 6.24351 16.9185 6.11182 17.25 6.11182ZM12 7.61182C13.3261 7.61182 14.5979 8.1386 15.5355 9.07628C16.4732 10.014 17 11.2857 17 12.6118C17 13.9379 16.4732 15.2097 15.5355 16.1474C14.5979 17.085 13.3261 17.6118 12 17.6118C10.6739 17.6118 9.40215 17.085 8.46447 16.1474C7.52678 15.2097 7 13.9379 7 12.6118C7 11.2857 7.52678 10.014 8.46447 9.07628C9.40215 8.1386 10.6739 7.61182 12 7.61182ZM12 9.61182C11.2044 9.61182 10.4413 9.92789 9.87868 10.4905C9.31607 11.0531 9 11.8162 9 12.6118C9 13.4075 9.31607 14.1705 9.87868 14.7331C10.4413 15.2957 11.2044 15.6118 12 15.6118C12.7956 15.6118 13.5587 15.2957 14.1213 14.7331C14.6839 14.1705 15 13.4075 15 12.6118C15 11.8162 14.6839 11.0531 14.1213 10.4905C13.5587 9.92789 12.7956 9.61182 12 9.61182Z"
+                                fill="#F6F6F6"
+                            />
+                        </svg>
+                    </a>
+                    <a href="" class="menu-section__contacts-link">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="25"
+                            viewBox="0 0 24 25"
+                            fill="none"
+                            class="icon icon-stroke"
+                        >
+                            <path
+                                d="M5 4.61182H9L11 9.61182L8.5 11.1118C9.57096 13.2833 11.3285 15.0409 13.5 16.1118L15 13.6118L20 15.6118V19.6118C20 20.1422 19.7893 20.651 19.4142 21.026C19.0391 21.4011 18.5304 21.6118 18 21.6118C14.0993 21.3748 10.4202 19.7183 7.65683 16.955C4.8935 14.1917 3.23705 10.5126 3 6.61182C3 6.08138 3.21071 5.57268 3.58579 5.1976C3.96086 4.82253 4.46957 4.61182 5 4.61182Z"
+                                stroke="#F6F6F6"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </a>
+                    <a href="" class="menu-section__contacts-link">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="25"
+                            viewBox="0 0 24 25"
+                            fill="none"
+                            class="icon icon-fill"
+                        >
+                            <path
+                                d="M22 6.61182C22 5.51182 21.1 4.61182 20 4.61182H4C2.9 4.61182 2 5.51182 2 6.61182V18.6118C2 19.7118 2.9 20.6118 4 20.6118H20C21.1 20.6118 22 19.7118 22 18.6118V6.61182ZM20 6.61182L12 11.6118L4 6.61182H20ZM20 18.6118H4V8.61182L12 13.6118L20 8.61182V18.6118Z"
+                                fill="#F6F6F6"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </section>
+            <section class="hero-section" id="hero-section">
+                <video autoplay muted loop id="hero-section__bg-video">
+                    <source src="/UNDRCar/assets/hero-section-bg-video-tKHRHah9.mp4" type="video/mp4" />
+                </video>
+                <h1 class="hero-section__header">Keeping Your Car in Top Gear</h1>
+            </section>
+            <section class="statement-section">
+                <div class="statement-section__container"></div>
+            </section>
+        </main>
     </body>
 </html>
