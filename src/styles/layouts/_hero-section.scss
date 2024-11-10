@@ -1,5 +1,4 @@
 .hero-section {
-    position: relative;
     overflow: hidden;
 
     &__header {
@@ -11,29 +10,6 @@
         color: #ffffffb2;
         width: min(118.4vh, 69.86vw);
         user-select: none;
-    }
-
-    &__side-buttons {
-        position: absolute;
-        top: 1.18vh;
-        bottom: 1.18vh;
-        left: 1.18vh;
-        background-color: #00000080;
-        backdrop-filter: blur(2px);
-        border-radius: 1.76vh;
-        padding: 2.94vh 1.88vh 2.35vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2.12vh;
-    }
-    &__menu-icon {
-        flex-grow: 1;
-    }
-    &__contacts-link {
-        padding: 1.18vh;
-        border: 1px solid $dark-gray-color;
-        border-radius: 50%;
     }
 }
 #hero-section__bg-video {

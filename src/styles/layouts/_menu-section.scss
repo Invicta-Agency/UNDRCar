@@ -1,0 +1,32 @@
+.menu-section {
+    position: fixed;
+    top: 1.18vh;
+    bottom: 1.18vh;
+    left: 1.18vh;
+    z-index: 40;
+    background-color: #00000080;
+    backdrop-filter: blur(2px);
+    border-radius: 1.76vh;
+    min-width: auto;
+    width: auto;
+    height: auto;
+    padding: 2.94vh 1.88vh 2.35vh;
+
+    &__menu-buttons {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2.12vh;
+        height: 100%;
+    }
+    &__menu-icon {
+        flex-grow: 1;
+    }
+    &__contacts-link {
+        padding: 1.18vh;
+        border: 1px solid $dark-gray-color;
+        border-radius: 50%;
+        outline: none;
+        @include icons-states;
+    }
+}
