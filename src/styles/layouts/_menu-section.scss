@@ -11,6 +11,8 @@
     width: auto;
     height: auto;
     padding: 2.94vh 1.88vh 2.35vh;
+    display: flex;
+    flex-direction: column;
 
     &__menu-buttons {
         display: flex;
@@ -18,15 +20,74 @@
         flex-direction: column;
         gap: 2.12vh;
         height: 100%;
+        width: 3.1vw;
     }
-    &__menu-icon {
+    &__menu-icon-wrapper {
         flex-grow: 1;
     }
-    &__contacts-link {
+    &__menu-icon {
+        width: 5.21vh;
+        svg {
+            path {
+                stroke: $white-color;
+            }
+            @include icon;
+            @include icon-states("stroke");
+        }
+        &:focus-visible:not(:active) svg {
+            outline: 2px solid $dark-accent-color;
+        }
+    }
+    &__contacts-icon {
         padding: 1.18vh;
         border: 1px solid $dark-gray-color;
         border-radius: 50%;
         outline: none;
-        @include icons-states;
+        transform-origin: bottom;
+        @include children-icons-states;
+    }
+
+    &__navigation-links-wrapper {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        padding-top: 8vh;
+        padding-bottom: 19.18vh;
+    }
+    &__navigation-link {
+        @include header2-text-bold;
+        display: block;
+        text-align: center;
+        width: fit-content;
+        outline: none;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        &:hover {
+            color: $accent-color;
+        }
+        &:active {
+            color: $dark-accent-color;
+        }
+        &:focus-visible:not(:active) {
+            outline: 2px solid $accent-color;
+            color: #fff;
+        }
+    }
+    &__contacts-wrapper {
+        display: none;
+        justify-content: space-between;
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+    &__contact-name {
+        color: $light-gray-color;
+        text-transform: uppercase;
+        font-size: 1.88vh;
+    }
+    &__contact-content {
+        @include link-states;
+        margin-top: 5px;
     }
 }

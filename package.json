@@ -16,6 +16,7 @@
   "dependencies": {
     "gsap": "^3.12.5",
     "lenis": "^1.1.13",
+    "lottie-web": "^5.12.2",
     "normalize.css": "^8.0.1",
     "split-type": "^0.2.1"
   }

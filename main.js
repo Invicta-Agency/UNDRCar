@@ -1,10 +1,11 @@
 import "./src/styles/main.scss";
-// import "./src/scripts/menu-section";
+import "./src/scripts/menu-section";
 // import "./src/scripts/statements-animation";
 
 const scrollContainer = document.getElementById("main");
 let isScrolling = false;
 let targetScrollLeft = 0;
+let scrollTimeout;
 
 scrollContainer.addEventListener("wheel", (event) => {
     event.preventDefault();
@@ -25,7 +26,12 @@ scrollContainer.addEventListener("wheel", (event) => {
 });
 
 scrollContainer.addEventListener("scroll", () => {
-    if (Math.abs(scrollContainer.scrollLeft - targetScrollLeft) < 1) {
-        isScrolling = false;
+    if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
     }
+    scrollTimeout = setTimeout(() => {
+        if (Math.abs(scrollContainer.scrollLeft - targetScrollLeft) < 1) {
+            isScrolling = false;
+        }
+    }, 100);
 });
