@@ -1,6 +1,6 @@
 import "./src/styles/main.scss";
 import "./src/scripts/menu-section";
-// import "./src/scripts/statements-animation";
+import "./src/scripts/statement-section";
 
 const scrollContainer = document.getElementById("main");
 let isScrolling = false;
