@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 
 const blackColor = getComputedStyle(document.documentElement).getPropertyValue("--black-color").trim();
 
-let menuIsShown = false;
+export let menuIsShown = false;
 
 const lottieMenuIcon = lottie.loadAnimation({
     container: document.getElementById("menu-icon"),
@@ -30,12 +30,20 @@ const menuTimeline = gsap.timeline({
 });
 
 menuTimeline
-    .add(() => {
+    .call(() => {
         lottieMenuIcon.play();
+        menuIsShown = !menuIsShown;
     })
     .to(
         ".menu-section",
-        { right: "1.18vh", backgroundColor: blackColor, paddingLeft: "2.94vh", paddingRight: "2.94vh", duration: 1 },
+        {
+            right: "1.18vh",
+            maxWidth: "100vw",
+            backgroundColor: blackColor,
+            paddingLeft: "2.94vh",
+            paddingRight: "2.94vh",
+            duration: 1,
+        },
         "<"
     )
     .to(
@@ -58,8 +66,7 @@ menuTimeline
 const menuBtnOnClickHandler = () => {
     requestAnimationFrame(() => {
         menuIsShown ? menuTimeline.reverse() : menuTimeline.play();
-        menuIsShown = !menuIsShown;
-        lottieMenuIcon.setDirection(menuIsShown ? 1 : -1);
+        lottieMenuIcon.setDirection(menuIsShown ? -1 : 1);
     });
 };
 

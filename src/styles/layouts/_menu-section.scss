@@ -3,6 +3,7 @@
     top: 1.18vh;
     bottom: 1.18vh;
     left: 1.18vh;
+    right: auto;
     z-index: 40;
     background-color: #00000080;
     backdrop-filter: blur(2px);
@@ -13,6 +14,7 @@
     padding: 2.94vh 1.88vh 2.35vh;
     display: flex;
     flex-direction: column;
+    max-width: fit-content;
 
     &__menu-buttons {
         display: flex;

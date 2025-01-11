@@ -1,6 +1,8 @@
 import "./src/styles/main.scss";
 import "./src/scripts/menu-section";
 import "./src/scripts/statement-section";
+import { menuIsShown } from "./src/scripts/menu-section";
+import { gsap } from "gsap";
 
 const scrollContainer = document.getElementById("main");
 let isScrolling = false;
@@ -15,11 +17,17 @@ scrollContainer.addEventListener("wheel", (event) => {
     const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
 
     if (event.deltaY > 0) {
-        if (targetScrollLeft !== maxScrollLeft) isScrolling = true;
-        targetScrollLeft = Math.min(scrollContainer.scrollLeft + scrollAmount, maxScrollLeft);
+        if (!menuIsShown) {
+            if (targetScrollLeft !== maxScrollLeft) isScrolling = true;
+            targetScrollLeft = Math.min(scrollContainer.scrollLeft + scrollAmount, maxScrollLeft);
+            gsap.to(".menu-section", { left: "-25%", duration: 1 });
+        }
     } else {
-        if (targetScrollLeft !== 0) isScrolling = true;
-        targetScrollLeft = Math.max(scrollContainer.scrollLeft - scrollAmount, 0);
+        if (!menuIsShown) {
+            if (targetScrollLeft !== 0) isScrolling = true;
+            targetScrollLeft = Math.max(scrollContainer.scrollLeft - scrollAmount, 0);
+            gsap.to(".menu-section", { left: "1.18vh", duration: 1 });
+        }
     }
 
     scrollContainer.scrollTo({ left: targetScrollLeft, behavior: "smooth" });
