@@ -1,0 +1,37 @@
+.statistics-section {
+    padding: 18.8vh 2.43vw;
+    z-index: 3;
+    background-color: $black-color;
+    display: flex;
+    gap: 1.74vw;
+
+    &__text-wrapper {
+        flex-basis: 33.53%;
+    }
+    &__icon {
+        width: 3.77rem;
+        height: 3.77rem;
+        margin-top: 3.1vh;
+    }
+    &__cards-wrapper {
+        flex-basis: 66.47%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    &__card {
+        background-color: $dark-gray-color;
+        padding: 1.67rem;
+        border-radius: 2.22rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__card-accent {
+        background-color: $accent-color;
+    }
+    &__card-value {
+        font-size: 5.55rem;
+        font-family: Play;
+    }
+}
