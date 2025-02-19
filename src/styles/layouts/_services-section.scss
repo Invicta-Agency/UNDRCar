@@ -1,0 +1,13 @@
+.services-section {
+    z-index: 4;
+    background-image: url("./public/assets/images/services-bg.jpg");
+    background-position: center;
+    background-size: cover;
+
+    &__cards-wrapper {
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        gap: 17.6vh;
+    }
+}
