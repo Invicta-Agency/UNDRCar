@@ -28,6 +28,7 @@ body {
 .scroll-container {
     display: flex;
     overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 .horisontal-scroll-box {
     position: sticky;
@@ -49,4 +50,5 @@ h3 {
 a {
     color: $white-color;
     text-decoration: none;
+    cursor: pointer;
 }

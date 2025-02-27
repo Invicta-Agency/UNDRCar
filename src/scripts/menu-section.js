@@ -42,7 +42,7 @@ menuTimeline
             backgroundColor: blackColor,
             paddingLeft: "2.94vh",
             paddingRight: "2.94vh",
-            duration: 1,
+            duration: 0.8,
         },
         "<"
     )
@@ -86,3 +86,7 @@ document.querySelector(".menu-section__menu-icon").addEventListener(
         if (e.key === "Enter") menuBtnOnClickHandler();
     }, 100)
 );
+
+document.querySelectorAll(".menu-section__navigation-link").forEach((link) => {
+    link.addEventListener("click", debounce(menuBtnOnClickHandler, 100));
+});
