@@ -47,6 +47,10 @@ h3 {
     @include header3-text;
     margin: 0;
 }
+h4 {
+    @include header4-text;
+    margin: 0;
+}
 a {
     color: $white-color;
     text-decoration: none;

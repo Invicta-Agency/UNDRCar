@@ -13,4 +13,50 @@
         height: 100vh;
         padding: 16.8vh 2.36vw;
     }
+    &__card-image {
+        width: 13.9vw;
+        border-radius: 2.35vh;
+        align-self: flex-end;
+    }
+    &__card {
+        width: 31.25vw;
+        padding: 2.35vh;
+        border-radius: 3.5vh;
+        background-color: $gray-40-color;
+        backdrop-filter: blur(5px);
+        display: flex;
+        flex-direction: column;
+
+        &:nth-child(odd) {
+            align-self: flex-end;
+        }
+
+        h4 {
+            margin-top: 0.5rem;
+            max-width: 24.3vw;
+        }
+        &:nth-child(3) {
+            h4 {
+                max-width: 16vw;
+            }
+        }
+        &:nth-child(4) {
+            h4 {
+                max-width: 23vw;
+            }
+        }
+        &:nth-child(9) {
+            h4 {
+                max-width: 17vw;
+            }
+        }
+    }
+    &__card-text-wrapper {
+        margin-top: 1.65vh;
+        display: flex;
+        gap: 4.51vw;
+    }
+    &__card-icon {
+        width: 8vh;
+    }
 }
