@@ -25,17 +25,18 @@ body {
     color: $white-color;
     background-color: $black-color;
 }
-.main {
+.scroll-container {
     display: flex;
-    overflow-x: scroll;
     overflow-y: hidden;
+}
+.horisontal-scroll-box {
+    position: sticky;
+    left: 0;
 }
 section {
     min-width: 100vw;
     width: 100vw;
     height: 100vh;
-    position: sticky;
-    left: 0;
 }
 h1 {
     @include header1-text;

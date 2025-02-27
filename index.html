@@ -9,7 +9,7 @@
     </head>
 
     <body>
-        <main class="main" id="main">
+        <div class="scroll-container" id="scroll-container">
             <section class="menu-section">
                 <div class="menu-section__menu-buttons">
                     <div class="menu-section__menu-icon-wrapper">
@@ -96,16 +96,16 @@
                     </div>
                 </div>
             </section>
-            <section class="hero-section" id="hero-section">
+            <section class="hero-section horisontal-scroll-box" id="hero-section">
                 <video autoplay muted loop id="hero-section__bg-video">
                     <source src="./src/assets/videos/hero-section-bg-video.mp4" type="video/mp4" />
                 </video>
                 <h1 class="hero-section__header">Keeping Your Car in Top Gear</h1>
             </section>
-            <section class="statement-section">
+            <section class="statement-section horisontal-scroll-box">
                 <div class="statement-section__container"></div>
             </section>
-            <section class="statistics-section">
+            <section class="statistics-section horisontal-scroll-box">
                 <div class="statistics-section__text-wrapper">
                     <p>
                         At UNDRCar, we're not just mechanics; we're automotive enthusiasts on a mission. Our expert team
@@ -137,8 +137,8 @@
                     </div>
                 </div>
             </section>
-            <section class="services-section">
-                <div class="services-section__cards-wrapper">
+            <section class="services-section horisontal-scroll-box">
+                <div class="services-section__cards-wrapper vertical-scroll-box">
                     <div class="services-section__card">
                         <img src="./public/assets/images/services-image.jpg" alt="services photo" />
                     </div>
@@ -168,7 +168,7 @@
                     </div>
                 </div>
             </section>
-        </main>
+        </div>
         <script type="module" src="./main.js"></script>
     </body>
 </html>

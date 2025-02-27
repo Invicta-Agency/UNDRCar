@@ -161,7 +161,7 @@ const statementsAnimationTimeline = gsap.timeline({
         start: "left 70%",
         end: "left 0", // ????????
         // markers: true,
-        scroller: ".main",
+        scroller: ".scroll-container",
     },
 });
 
