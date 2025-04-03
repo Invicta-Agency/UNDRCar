@@ -33,7 +33,16 @@ body {
 .horisontal-scroll-box {
     position: sticky;
     left: 0;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
 }
+.vertical-scroll-box {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
 section {
     min-width: 100vw;
     width: 100vw;

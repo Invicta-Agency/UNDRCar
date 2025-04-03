@@ -9,9 +9,8 @@
         flex-direction: column;
         gap: 17.6vh;
         scroll-behavior: smooth;
-        overflow-y: auto;
-        height: 100vh;
         padding: 16.8vh 2.36vw;
+        overflow-x: hidden;
     }
     &__card-image {
         width: 13.9vw;
@@ -26,9 +25,11 @@
         backdrop-filter: blur(5px);
         display: flex;
         flex-direction: column;
+        transform: translateX(-100%) scale(0.5);
 
         &:nth-child(odd) {
             align-self: flex-end;
+            transform: translateX(100%) scale(0.5);
         }
 
         h4 {

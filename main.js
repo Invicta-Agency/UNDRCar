@@ -1,5 +1,6 @@
 import "./src/styles/main.scss";
 import "./src/scripts/menu-section";
+import "./src/scripts/services-section";
 import "./src/scripts/statement-section";
 import { menuIsShown } from "./src/scripts/menu-section";
 import { gsap } from "gsap";
