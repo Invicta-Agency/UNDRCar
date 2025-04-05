@@ -1,0 +1,47 @@
+.gallery-footer-wrapper {
+    z-index: 5;
+    background-color: $black-color;
+}
+
+.gallery-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &__text-wrapper {
+        z-index: 2;
+    }
+
+    &__photo {
+        position: absolute;
+        top: 101%;
+
+        &--11,
+        &--12 {
+            height: 36vh;
+            left: 42.36%;
+        }
+        &--21,
+        &--22 {
+            height: 49vh;
+            left: 2.5%;
+        }
+        &--31,
+        &--32 {
+            height: 44.35vh;
+            right: 2.5%;
+        }
+        &--41,
+        &--42 {
+            height: 40vh;
+            left: 21.25%;
+        }
+        &--51,
+        &--52 {
+            height: 36vh;
+            right: 15%;
+        }
+    }
+}

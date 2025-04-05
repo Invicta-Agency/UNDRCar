@@ -1,4 +1,5 @@
 import "./src/styles/main.scss";
+import "./src/scripts/gallery-section";
 import "./src/scripts/menu-section";
 import "./src/scripts/services-section";
 import "./src/scripts/statement-section";
@@ -60,7 +61,7 @@ scrollContainer.addEventListener("wheel", (event) => {
     });
 });
 
-const goToSection = (sectionIndex) => {
+const goToBox = (sectionIndex) => {
     currentBox = sectionIndex;
     gsap.to(scrollContainer, {
         scrollTo: { x: currentBox * window.innerWidth },
@@ -70,9 +71,18 @@ const goToSection = (sectionIndex) => {
 };
 
 document.querySelector(".menu-section__about-us").addEventListener("click", () => {
-    goToSection(2);
+    goToBox(2);
 });
 
 document.querySelector(".menu-section__services").addEventListener("click", () => {
-    goToSection(3);
+    goToBox(3);
+});
+// Update scroll position on window resize
+window.addEventListener("resize", () => {
+    const targetScrollLeft = currentBox * window.innerWidth;
+    gsap.to(scrollContainer, {
+        scrollTo: { x: targetScrollLeft },
+        duration: 0.6,
+        ease: "circ",
+    });
 });
