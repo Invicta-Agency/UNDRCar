@@ -8,9 +8,9 @@
 }
 
 @mixin header2-text {
-    font-family: Play;
-    // font-size: 11.76vh; //100px
-    font-size: min(11.76vh, 6.94vw); //100px
+    font-family: Alexandria;
+    font-size: min(6.94vw, 11.76vh); //100px
+    font-weight: 400;
     text-transform: uppercase;
 }
 

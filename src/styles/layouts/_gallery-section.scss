@@ -1,22 +1,43 @@
 .gallery-footer-wrapper {
     z-index: 5;
     background-color: $black-color;
+    // background-color: lemonchiffon;
 }
 
 .gallery-section {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     overflow: hidden;
 
     &__text-wrapper {
         z-index: 2;
+        width: min(51.39vw, 87.6vh);
+        height: min(51.39vw, 87.6vh);
+        margin-bottom: 1.29vh;
+        border-radius: 50%;
+        background-color: #00000000;
+        backdrop-filter: blur(8.33rem);
+        background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 212, 255, 0) 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            text-align: center;
+        }
+        p {
+            font-size: 1.33rem;
+            margin-top: 3.5vh;
+        }
     }
 
     &__photo {
         position: absolute;
         top: 101%;
+        will-change: top;
 
         &--11,
         &--12 {

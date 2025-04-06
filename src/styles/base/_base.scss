@@ -28,7 +28,11 @@ body {
 .scroll-container {
     display: flex;
     overflow-y: hidden;
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
+    // will-change: scroll-position;
+     will-change: transform; // Optimize for animations
+    width: 100vw; // Explicit width
+    height: 100vh; // Explicit height
 }
 .horisontal-scroll-box {
     position: sticky;
@@ -51,6 +55,10 @@ section {
 h1 {
     @include header1-text;
     margin: 0;
+}
+h2 {
+    @include header2-text;
+    margin:0;
 }
 h3 {
     @include header3-text;
