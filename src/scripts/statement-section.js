@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const accentColor = getComputedStyle(document.documentElement).getPropertyValue("--accent-color").trim();
 
-const firstStageText = (text, blackLetters) => {
+const firstStageText = (text, whiteLetters) => {
     const textContainer = document.querySelector(".statement-section__container");
     textContainer.innerHTML = null;
 
@@ -17,10 +17,10 @@ const firstStageText = (text, blackLetters) => {
     const secondaryTextWrapperSecond = primaryTextWrapper.cloneNode(false);
 
     // creating primary text element
-    const primaryTextElement = document.createElement("h1");
+    const primaryTextElement = document.createElement("h2");
     primaryTextElement.classList.add(
-        "statement-section__primary-text-h1",
-        blackLetters ? "statement-section__black-letters" : "b"
+        "statement-section__primary-text-h2",
+        whiteLetters ? "statement-section__white-letters-primary" : "b"
     );
     text.split("").forEach((letter) => {
         const span = document.createElement("span");
@@ -32,19 +32,19 @@ const firstStageText = (text, blackLetters) => {
     primaryTextWrapper.appendChild(primaryTextElement);
 
     // creating secondary text elements
-    const secondaryTextElementFirst = document.createElement("h1");
+    const secondaryTextElementFirst = document.createElement("h2");
     secondaryTextElementFirst.textContent = text;
-    secondaryTextElementFirst.classList.add("statement-section__secondary-text-h1");
+    secondaryTextElementFirst.classList.add("statement-section__secondary-text-h2");
 
     const secondaryTextElementSecond = secondaryTextElementFirst.cloneNode(true);
 
     secondaryTextElementFirst.classList.add(
-        "statement-section__secondary-text-h1-animate-first",
-        blackLetters ? "statement-section__black-stroke" : "b"
+        "statement-section__secondary-text-h2-animate-first",
+        whiteLetters ? "statement-section__white-letters-sec-first" : "b"
     );
     secondaryTextElementSecond.classList.add(
-        "statement-section__secondary-text-h1-animate-second",
-        blackLetters ? "statement-section__gray-stroke" : "b"
+        "statement-section__secondary-text-h2-animate-second",
+        whiteLetters ? "statement-section__white-letters-sec-sec" : "b"
     );
 
     secondaryTextWrapperFirst.appendChild(secondaryTextElementFirst);
@@ -89,24 +89,20 @@ const firstStageTimeline = () => {
     const tl = gsap.timeline();
 
     tl.to(".statement-section__letter", { duration: 0.6, y: 0, stagger: 0.05 })
-        .to(".statement-section__secondary-text-h1-animate-first", { duration: 0.5, opacity: 1 })
-        .to(".statement-section__secondary-text-h1-animate-second", { duration: 0.5, opacity: 1 })
-        .to(".statement-section__statement-primary-line", { duration: 0.5, width: "112%" })
+        .to(".statement-section__secondary-text-h2-animate-first", { duration: 0.5, opacity: 1 })
+        .to(".statement-section__secondary-text-h2-animate-second", { duration: 0.5, opacity: 1 })
+        .to(".statement-section__statement-primary-line", { duration: 0.5, width: "100%" })
         .to(".statement-section__letter", { duration: 0.2, color: "#ff0000" })
-        .to(".statement-section__secondary-text-h1-animate-first", {
+        .to(".statement-section__secondary-text-h2-animate-first", {
             duration: 0.2,
-            css: {
-                "-webkit-text-stroke-color": "#ff0000",
-            },
+            color: "#400000",
         })
-        .to(".statement-section__secondary-text-h1-animate-second", {
+        .to(".statement-section__secondary-text-h2-animate-second", {
             duration: 0.2,
-            css: {
-                "-webkit-text-stroke-color": "#ff0000",
-            },
+            color: "#260000",
         })
         .to(
-            ".statement-section__letter, .statement-section__statement-primary-line, .statement-section__secondary-text-h1-animate-first, .statement-section__secondary-text-h1-animate-second ",
+            ".statement-section__letter, .statement-section__statement-primary-line, .statement-section__secondary-text-h2-animate-first, .statement-section__secondary-text-h2-animate-second ",
             { duration: 0.5, opacity: 0 }
         );
     return tl;
@@ -121,10 +117,10 @@ const secondStageTimeline = () => {
             y: 0,
             stagger: 0.05,
         })
-        .to(".statement-section__secondary-text-h1-animate-first", { duration: 0.5, opacity: 1 })
-        .to(".statement-section__secondary-text-h1-animate-second", { duration: 0.5, opacity: 1 })
+        .to(".statement-section__secondary-text-h2-animate-first", { duration: 0.5, opacity: 1 })
+        .to(".statement-section__secondary-text-h2-animate-second", { duration: 0.5, opacity: 1 })
         .to(
-            ".statement-section__letter, .statement-section__statement-primary-line, .statement-section__secondary-text-h1-animate-first, .statement-section__secondary-text-h1-animate-second ",
+            ".statement-section__letter, .statement-section__statement-primary-line, .statement-section__secondary-text-h2-animate-first, .statement-section__secondary-text-h2-animate-second ",
             { duration: 0.5, opacity: 0 }
         );
 

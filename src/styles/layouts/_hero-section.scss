@@ -2,6 +2,7 @@
     overflow: hidden;
 
     &__header {
+        @include header1-text-light;
         position: absolute;
         top: 41.88%;
         left: 50%;

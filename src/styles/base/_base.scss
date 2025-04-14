@@ -13,16 +13,19 @@
         max-width: 0px !important;
     }
 }
+:root {
+    font-size: 2.12vh; // 18px
+}
 html,
 body {
-    @include body-text;
+    @include body-xs-light;
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
 }
 
 body {
-    color: $white-color;
+    color: $white-50-color;
     background-color: $black-color;
 }
 .scroll-container {
@@ -40,19 +43,18 @@ section {
     height: 100vh;
 }
 h1 {
-    @include header1-text;
+    margin: 0;
+}
+h2 {
+    @include header2-text;
     margin: 0;
 }
 h3 {
     @include header3-text;
     margin: 0;
 }
-h4 {
-    @include header4-text;
-    margin: 0;
-}
 a {
-    color: $white-color;
+    color: $white-50-color;
     text-decoration: none;
     cursor: pointer;
 }

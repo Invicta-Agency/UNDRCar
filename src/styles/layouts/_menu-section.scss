@@ -31,18 +31,18 @@
         width: 5.21vh;
         svg {
             path {
-                stroke: $white-color;
+                stroke: $white-50-color;
             }
             @include icon;
             @include icon-states("stroke");
         }
         &:focus-visible:not(:active) svg {
-            outline: 2px solid $dark-accent-color;
+            outline: 2px solid $accent-900-color;
         }
     }
     &__contacts-icon {
         padding: 1.18vh;
-        border: 1px solid $dark-gray-color;
+        border: 1px solid $black-800-color;
         border-radius: 50%;
         outline: none;
         transform-origin: bottom;
@@ -59,7 +59,7 @@
         padding-bottom: 19.18vh;
     }
     &__navigation-link {
-        @include header2-text-bold;
+        @include header1-text-extra-light;
         display: block;
         text-align: center;
         width: fit-content;
@@ -67,13 +67,13 @@
         transform: scaleY(0);
         transform-origin: bottom;
         &:hover {
-            color: $accent-color;
+            color: $accent-600-color;
         }
         &:active {
-            color: $dark-accent-color;
+            color: $accent-900-color;
         }
         &:focus-visible:not(:active) {
-            outline: 2px solid $accent-color;
+            outline: 2px solid $accent-600-color;
             color: #fff;
         }
     }
@@ -84,9 +84,7 @@
         transform-origin: bottom;
     }
     &__contact-name {
-        color: $light-gray-color;
-        text-transform: uppercase;
-        font-size: 1.88vh;
+        color: $white-300-color;
     }
     &__contact-content {
         @include link-states;

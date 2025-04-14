@@ -6,7 +6,7 @@
     display: block;
 
     &:focus-visible:not(:active) {
-        outline: 2px solid $dark-accent-color;
+        outline: 2px solid $accent-900-color;
     }
 }
 @mixin icon-states($property) {
@@ -14,10 +14,10 @@
         #{$property}: $light-accent-color;
     }
     &:active path {
-        #{$property}: $dark-accent-color;
+        #{$property}: $accent-900-color;
     }
     &:disabled {
-        #{$property}: $light-gray-color;
+        #{$property}: $white-300-color;
     }
 }
 .icon {
@@ -37,19 +37,19 @@
         fill: $light-accent-color;
     }
     &:active .icon-stroke path {
-        stroke: $dark-accent-color;
+        stroke: $accent-900-color;
     }
     &:active .icon-fill path {
-        fill: $dark-accent-color;
+        fill: $accent-900-color;
     }
     &:disabled .icon-stroke path {
-        stroke: $light-gray-color;
+        stroke: $white-300-color;
     }
     &:disabled .icon-fill path {
-        fill: $light-gray-color;
+        fill: $white-300-color;
     }
     &:focus-visible:not(:active) .icon-stroke,
     &:focus-visible:not(:active) .icon-fill {
-        outline: 2px solid $dark-accent-color;
+        outline: 2px solid $accent-900-color;
     }
 }
