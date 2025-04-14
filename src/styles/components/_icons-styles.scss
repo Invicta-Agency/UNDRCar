@@ -6,15 +6,15 @@
     display: block;
 
     &:focus-visible:not(:active) {
-        outline: 2px solid $accent-900-color;
+        outline: 2px solid $accent-600-color;
     }
 }
 @mixin icon-states($property) {
     &:hover path {
-        #{$property}: $light-accent-color;
+        #{$property}: $accent-200-color;
     }
     &:active path {
-        #{$property}: $accent-900-color;
+        #{$property}: $accent-600-color;
     }
     &:disabled {
         #{$property}: $white-300-color;
@@ -31,16 +31,16 @@
 }
 @mixin children-icons-states {
     &:hover .icon-stroke path {
-        stroke: $light-accent-color;
+        stroke: $accent-200-color;
     }
     &:hover .icon-fill path {
-        fill: $light-accent-color;
+        fill: $accent-200-color;
     }
     &:active .icon-stroke path {
-        stroke: $accent-900-color;
+        stroke: $accent-600-color;
     }
     &:active .icon-fill path {
-        fill: $accent-900-color;
+        fill: $accent-600-color;
     }
     &:disabled .icon-stroke path {
         stroke: $white-300-color;
@@ -50,6 +50,6 @@
     }
     &:focus-visible:not(:active) .icon-stroke,
     &:focus-visible:not(:active) .icon-fill {
-        outline: 2px solid $accent-900-color;
+        outline: 2px solid $accent-600-color;
     }
 }

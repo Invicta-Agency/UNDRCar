@@ -47,6 +47,14 @@
         outline: none;
         transform-origin: bottom;
         @include children-icons-states;
+        &:focus-visible:not(:active) {
+            border-color: $accent-600-color;
+
+            .icon-stroke,
+            .icon-fill {
+                outline: none;
+            }
+        }
     }
 
     &__navigation-links-wrapper {
