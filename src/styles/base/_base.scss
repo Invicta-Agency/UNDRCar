@@ -14,7 +14,7 @@
     }
 }
 :root {
-    font-size: 2.12vh; // 18px
+    font-size: min(1.25vw, 2.12vh); // 18px
 }
 html,
 body {
