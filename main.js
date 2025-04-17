@@ -150,7 +150,7 @@ window.addEventListener("resize", () => {
 });
 
 horisontalScrollBoxes.forEach((section, index) => {
-    section.addEventListener("focusin", () => {
+    section.addEventListener("focus", () => {
         goToBox(index);
     });
 });
