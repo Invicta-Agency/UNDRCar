@@ -148,3 +148,9 @@ window.addEventListener("resize", () => {
         ease: "circ",
     });
 });
+
+horisontalScrollBoxes.forEach((section, index) => {
+    section.addEventListener("focusin", () => {
+        goToBox(index);
+    });
+});
