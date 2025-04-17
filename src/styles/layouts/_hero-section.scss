@@ -1,15 +1,36 @@
 .hero-section {
     overflow: hidden;
+    position: relative;
+
+    &__header-wrapper {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        left: 8.4vw;
+        display: flex;
+        align-items: center;
+    }
 
     &__header {
-        position: absolute;
-        top: 41.88%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        color: #ffffffb2;
-        width: min(118.4vh, 69.86vw);
+        @include header1-text-light;
+        position: relative;
+
+        max-width: min(118.4vh, 69.86vw);
         user-select: none;
+
+        span {
+            @include body-s-extra-light;
+            position: absolute;
+            max-width: 34.6vw;
+            text-wrap: nowrap;
+            text-align: right;
+            bottom: -3.76vh;
+            left: 78%;
+
+            @media (max-width: 1150px), (max-height: 670px) {
+                left: 80%;
+            }
+        }
     }
 }
 #hero-section__bg-video {

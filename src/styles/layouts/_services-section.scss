@@ -17,6 +17,11 @@
         border-radius: 2.35vh;
         align-self: flex-end;
     }
+    &__card-title {
+        @include body-l-light;
+        margin-top: 0.5rem;
+        max-width: 24.3vw;
+    }
     &__card {
         width: 31.25vw;
         padding: 2.35vh;
@@ -32,26 +37,20 @@
             transform: translateX(100%) scale(0.5);
         }
 
-        h4 {
-            margin-top: 0.5rem;
-            max-width: 24.3vw;
-        }
         &:nth-child(3) {
-            h4 {
+            .services-section__card-title {
                 max-width: 16vw;
             }
         }
-        &:nth-child(4) {
-            h4 {
-                max-width: 23vw;
-            }
-        }
-        &:nth-child(9) {
-            h4 {
-                max-width: 17vw;
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7) {
+            .services-section__card-title {
+                max-width: 100%;
             }
         }
     }
+
     &__card-text-wrapper {
         margin-top: 1.65vh;
         display: flex;

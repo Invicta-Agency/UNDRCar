@@ -12,19 +12,17 @@
         }
     }
 
-    &__primary-text-h1 {
+    &__primary-text-h2 {
         overflow: hidden;
     }
 
-    &__secondary-text-h1 {
-        color: transparent;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: $white-color;
+    &__secondary-text-h2 {
+        color: $black-800-color;
         opacity: 0; // to 1
     }
 
-    &__secondary-text-h1-animate-second {
-        -webkit-text-stroke-color: $gray-color;
+    &__secondary-text-h2-animate-second {
+        color: $black-900-color;
     }
 
     &__letter {
@@ -38,11 +36,11 @@
     &__statement-primary-line,
     &__statement-secondary-line {
         border: none;
-        width: 0; //to 112%
+        width: 0; //to 100%
         background-color: $red-color;
         position: absolute;
         top: 53.5%;
-        left: -6%;
+        left: 0%;
     }
     &__statement-primary-line {
         height: 4px;
@@ -50,14 +48,14 @@
     &__statement-secondary-line {
         height: 2px;
     }
-    &__black-letters {
-        color: $black-color;
+    &__white-letters-primary {
+        color: $white-50-color;
     }
-    &__black-stroke {
-        -webkit-text-stroke-color: $black-color;
+    &__white-letters-sec-first {
+        color: $accent-400-color;
     }
-    &__gray-stroke {
-        -webkit-text-stroke-color: $dark-accent-color;
+    &__white-letters-sec-sec {
+        color: $accent-500-color;
     }
     &__text-wrapper {
         display: flex;
