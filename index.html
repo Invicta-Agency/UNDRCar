@@ -2,16 +2,16 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" href="/UNDRCar/assets/logo-BSof8P45.svg" />
+        <link rel="icon" href="/UNDRCar/assets/logo-Bxi48CwE.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
         <title>UNDRCar</title>
-      <script type="module" crossorigin src="/UNDRCar/assets/index-DxYxlg2o.js"></script>
-      <link rel="stylesheet" crossorigin href="/UNDRCar/assets/index-DYJLhriA.css">
+      <script type="module" crossorigin src="/UNDRCar/assets/index-Bpa4DNU1.js"></script>
+      <link rel="stylesheet" crossorigin href="/UNDRCar/assets/index-CmRuK90t.css">
     </head>
 
     <body>
-        <main class="main" id="main">
+        <div class="scroll-container" id="scroll-container">
             <section class="menu-section">
                 <div class="menu-section__menu-buttons">
                     <div class="menu-section__menu-icon-wrapper">
@@ -72,9 +72,9 @@
                     </a>
                 </div>
                 <div class="menu-section__navigation-links-wrapper">
-                    <a href="" class="menu-section__navigation-link">About us</a>
-                    <a href="" class="menu-section__navigation-link">Services</a>
-                    <a href="" class="menu-section__navigation-link">Gallery</a>
+                    <a class="menu-section__navigation-link menu-section__about-us" href="#">About us</a>
+                    <a class="menu-section__navigation-link menu-section__services" href="#">Services</a>
+                    <a class="menu-section__navigation-link menu-section__gallery" href="#">Gallery</a>
                 </div>
                 <div class="menu-section__contacts-wrapper">
                     <div class="menu-section__contact">
@@ -98,22 +98,28 @@
                     </div>
                 </div>
             </section>
-            <section class="hero-section" id="hero-section">
+            <section class="hero-section horisontal-scroll-box" id="hero-section" tabindex="0">
                 <video autoplay muted loop id="hero-section__bg-video">
                     <source src="/UNDRCar/assets/hero-section-bg-video-tKHRHah9.mp4" type="video/mp4" />
                 </video>
-                <h1 class="hero-section__header">Keeping Your Car in Top Gear</h1>
+                <div class="hero-section__header-wrapper">
+                    <h1 class="hero-section__header">
+                        Keeping Your Car in Top Gear
+                        <span
+                            >Pit stop perfection <br />
+                            for cars that crave the fast lane</span
+                        >
+                    </h1>
+                </div>
             </section>
-            <section class="statement-section">
+            <section class="statement-section horisontal-scroll-box" tabindex="0">
                 <div class="statement-section__container"></div>
             </section>
-            <section class="statistics-section">
+            <section class="statistics-section horisontal-scroll-box" tabindex="0">
                 <div class="statistics-section__text-wrapper">
-                    <p>
-                        At UNDRCar, we're not just mechanics; we're automotive enthusiasts on a mission. Our expert team
-                        thrives on tackling the unique challenges your vehicle presents. We bring innovation and
-                        precision to every service, ensuring your car runs at its best.
-                    </p>
+                    <p>At <span>UNDRCar</span>, we're not just mechanics; we're automotive enthusiasts on a mission.</p>
+                    <p>Our expert team thrives on tackling the unique challenges your vehicle presents.</p>
+                    <p>We bring innovation and precision to every service, ensuring your car runs at its best.</p>
                     <img
                         src="data:image/svg+xml,%3csvg%20width='68'%20height='68'%20viewBox='0%200%2068%2068'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='34'%20cy='34'%20r='33.5'%20stroke='%23EC6814'/%3e%3cpath%20d='M22.6646%2045.8331L47.0748%2021.4229M47.0748%2021.4229H22.6646M47.0748%2021.4229V45.8331'%20stroke='%23EC6814'/%3e%3c/svg%3e"
                         alt="arrow icon"
@@ -139,6 +145,235 @@
                     </div>
                 </div>
             </section>
-        </main>
+            <section class="services-section horisontal-scroll-box" tabindex="0">
+                <div class="services-section__cards-wrapper vertical-scroll-box">
+                    <div class="services-section__card">
+                        <img
+                            class="services-section__card-image"
+                            src="/UNDRCar/assets/services-image-BMJkCVU2.jpg"
+                            alt="services photo"
+                        />
+                        <p class="services-section__card-title">Suspension diagnostics</p>
+                        <div class="services-section__card-text-wrapper">
+                            <p>Checking the condition of shock absorbers and springs to identify faults.</p>
+                            <img
+                                class="services-section__card-icon"
+                                src="data:image/svg+xml,%3csvg%20width='68'%20height='69'%20viewBox='0%200%2068%2069'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='34'%20cy='34.5'%20r='33.5'%20stroke='%23EC6814'/%3e%3cpath%20d='M22.6644%2046.3331L47.0747%2021.9229M47.0747%2021.9229H22.6644M47.0747%2021.9229V46.3331'%20stroke='%23EC6814'/%3e%3c/svg%3e"
+                                alt="arrow image"
+                            />
+                        </div>
+                    </div>
+                    <div class="services-section__card">
+                        <img
+                            class="services-section__card-image"
+                            src="/UNDRCar/assets/services-image-BMJkCVU2.jpg"
+                            alt="services photo"
+                        />
+                        <p class="services-section__card-title">Computer Diagnostics</p>
+                        <div class="services-section__card-text-wrapper">
+                            <p>Inspection of the suspension system to identify technical faults and issues.</p>
+                            <img
+                                class="services-section__card-icon"
+                                src="data:image/svg+xml,%3csvg%20width='68'%20height='69'%20viewBox='0%200%2068%2069'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='34'%20cy='34.5'%20r='33.5'%20stroke='%23EC6814'/%3e%3cpath%20d='M22.6644%2046.3331L47.0747%2021.9229M47.0747%2021.9229H22.6644M47.0747%2021.9229V46.3331'%20stroke='%23EC6814'/%3e%3c/svg%3e"
+                                alt="arrow image"
+                            />
+                        </div>
+                    </div>
+                    <div class="services-section__card">
+                        <img
+                            class="services-section__card-image"
+                            src="/UNDRCar/assets/services-image-BMJkCVU2.jpg"
+                            alt="services photo"
+                        />
+                        <p class="services-section__card-title">Cylinder Head Repair</p>
+                        <div class="services-section__card-text-wrapper">
+                            <p>Restoration of the cylinder head to ensure proper engine operation.</p>
+                            <img
+                                class="services-section__card-icon"
+                                src="data:image/svg+xml,%3csvg%20width='68'%20height='69'%20viewBox='0%200%2068%2069'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='34'%20cy='34.5'%20r='33.5'%20stroke='%23EC6814'/%3e%3cpath%20d='M22.6644%2046.3331L47.0747%2021.9229M47.0747%2021.9229H22.6644M47.0747%2021.9229V46.3331'%20stroke='%23EC6814'/%3e%3c/svg%3e"
+                                alt="arrow image"
+                            />
+                        </div>
+                    </div>
+                    <div class="services-section__card">
+                        <img
+                            class="services-section__card-image"
+                            src="/UNDRCar/assets/services-image-BMJkCVU2.jpg"
+                            alt="services photo"
+                        />
+                        <p class="services-section__card-title">Brake System Repair</p>
+                        <div class="services-section__card-text-wrapper">
+                            <p>Resolving brake system malfunctions to enhance safety and performance.</p>
+                            <img
+                                class="services-section__card-icon"
+                                src="data:image/svg+xml,%3csvg%20width='68'%20height='69'%20viewBox='0%200%2068%2069'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='34'%20cy='34.5'%20r='33.5'%20stroke='%23EC6814'/%3e%3cpath%20d='M22.6644%2046.3331L47.0747%2021.9229M47.0747%2021.9229H22.6644M47.0747%2021.9229V46.3331'%20stroke='%23EC6814'/%3e%3c/svg%3e"
+                                alt="arrow image"
+                            />
+                        </div>
+                    </div>
+                    <div class="services-section__card">
+                        <img
+                            class="services-section__card-image"
+                            src="/UNDRCar/assets/services-image-BMJkCVU2.jpg"
+                            alt="services photo"
+                        />
+                        <p class="services-section__card-title">Engine Oil and Filter Replacement</p>
+                        <div class="services-section__card-text-wrapper">
+                            <p>Changing oil and filters for smooth and uninterrupted engine operation.</p>
+                            <img
+                                class="services-section__card-icon"
+                                src="data:image/svg+xml,%3csvg%20width='68'%20height='69'%20viewBox='0%200%2068%2069'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='34'%20cy='34.5'%20r='33.5'%20stroke='%23EC6814'/%3e%3cpath%20d='M22.6644%2046.3331L47.0747%2021.9229M47.0747%2021.9229H22.6644M47.0747%2021.9229V46.3331'%20stroke='%23EC6814'/%3e%3c/svg%3e"
+                                alt="arrow image"
+                            />
+                        </div>
+                    </div>
+                    <div class="services-section__card">
+                        <img
+                            class="services-section__card-image"
+                            src="/UNDRCar/assets/services-image-BMJkCVU2.jpg"
+                            alt="services photo"
+                        />
+                        <p class="services-section__card-title">Transmission Fluid Replacement</p>
+                        <div class="services-section__card-text-wrapper">
+                            <p>Replacing transmission fluid to ensure smooth and reliable vehicle performance.</p>
+                            <img
+                                class="services-section__card-icon"
+                                src="data:image/svg+xml,%3csvg%20width='68'%20height='69'%20viewBox='0%200%2068%2069'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='34'%20cy='34.5'%20r='33.5'%20stroke='%23EC6814'/%3e%3cpath%20d='M22.6644%2046.3331L47.0747%2021.9229M47.0747%2021.9229H22.6644M47.0747%2021.9229V46.3331'%20stroke='%23EC6814'/%3e%3c/svg%3e"
+                                alt="arrow image"
+                            />
+                        </div>
+                    </div>
+                    <div class="services-section__card">
+                        <img
+                            class="services-section__card-image"
+                            src="/UNDRCar/assets/services-image-BMJkCVU2.jpg"
+                            alt="services photo"
+                        />
+                        <p class="services-section__card-title">Timing Chain and Belt Replacement</p>
+                        <div class="services-section__card-text-wrapper">
+                            <p>Replacing timing chains and belts for optimal engine performance and reliability.</p>
+                            <img
+                                class="services-section__card-icon"
+                                src="data:image/svg+xml,%3csvg%20width='68'%20height='69'%20viewBox='0%200%2068%2069'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='34'%20cy='34.5'%20r='33.5'%20stroke='%23EC6814'/%3e%3cpath%20d='M22.6644%2046.3331L47.0747%2021.9229M47.0747%2021.9229H22.6644M47.0747%2021.9229V46.3331'%20stroke='%23EC6814'/%3e%3c/svg%3e"
+                                alt="arrow image"
+                            />
+                        </div>
+                    </div>
+                    <div class="services-section__card">
+                        <img
+                            class="services-section__card-image"
+                            src="/UNDRCar/assets/services-image-BMJkCVU2.jpg"
+                            alt="services photo"
+                        />
+                        <p class="services-section__card-title">Clutch Kit Replacement</p>
+                        <div class="services-section__card-text-wrapper">
+                            <p>Updating the clutch kit for smooth gear shifts and enhanced driving experience.</p>
+                            <img
+                                class="services-section__card-icon"
+                                src="data:image/svg+xml,%3csvg%20width='68'%20height='69'%20viewBox='0%200%2068%2069'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='34'%20cy='34.5'%20r='33.5'%20stroke='%23EC6814'/%3e%3cpath%20d='M22.6644%2046.3331L47.0747%2021.9229M47.0747%2021.9229H22.6644M47.0747%2021.9229V46.3331'%20stroke='%23EC6814'/%3e%3c/svg%3e"
+                                alt="arrow image"
+                            />
+                        </div>
+                    </div>
+                    <div class="services-section__card">
+                        <img
+                            class="services-section__card-image"
+                            src="/UNDRCar/assets/services-image-BMJkCVU2.jpg"
+                            alt="services photo"
+                        />
+                        <p class="services-section__card-title">US Car Restoration</p>
+                        <div class="services-section__card-text-wrapper">
+                            <p>Comprehensive repair of imported vehicles from the USA to restore them to condition.</p>
+                            <img
+                                class="services-section__card-icon"
+                                src="data:image/svg+xml,%3csvg%20width='68'%20height='69'%20viewBox='0%200%2068%2069'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='34'%20cy='34.5'%20r='33.5'%20stroke='%23EC6814'/%3e%3cpath%20d='M22.6644%2046.3331L47.0747%2021.9229M47.0747%2021.9229H22.6644M47.0747%2021.9229V46.3331'%20stroke='%23EC6814'/%3e%3c/svg%3e"
+                                alt="arrow image"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="horisontal-scroll-box gallery-footer-wrapper" tabindex="0">
+                <div class="vertical-scroll-box">
+                    <section class="gallery-section">
+                        <div class="gallery-section__text-wrapper">
+                            <div class="gallery-section__text-wrapper__dark-bg"></div>
+                            <h2>Our Memories</h2>
+                            <p>Let's create new ones together</p>
+                            <button class="gallery-section__button">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="50"
+                                    height="50"
+                                    viewBox="0 0 50 50"
+                                    fill="none"
+                                >
+                                    <circle cx="25" cy="25" r="24.5" stroke="#F6F6F6" />
+                                    <path
+                                        d="M16.6648 33.7008L34.6135 15.7521M34.6135 15.7521H16.6648M34.6135 15.7521V33.7008"
+                                        stroke="#F6F6F6"
+                                    />
+                                </svg>
+                                Contact Us
+                            </button>
+                        </div>
+                        <img
+                            class="gallery-section__photo gallery-section__photo--11"
+                            src="/UNDRCar/assets/photo1-BYDyJyc-.jpg"
+                            alt="photo from our gallery"
+                        />
+                        <img
+                            class="gallery-section__photo gallery-section__photo--12"
+                            src="/UNDRCar/assets/photo1-BYDyJyc-.jpg"
+                            alt="photo from our gallery"
+                        />
+
+                        <img
+                            class="gallery-section__photo gallery-section__photo--21"
+                            src="/UNDRCar/assets/photo2-BrW4d1j-.jpg"
+                            alt="photo from our gallery"
+                        />
+                        <img
+                            class="gallery-section__photo gallery-section__photo--22"
+                            src="/UNDRCar/assets/photo2-BrW4d1j-.jpg"
+                            alt="photo from our gallery"
+                        />
+
+                        <img
+                            class="gallery-section__photo gallery-section__photo--31"
+                            src="/UNDRCar/assets/photo3-ClwCXdtz.jpg"
+                            alt="photo from our gallery"
+                        />
+                        <img
+                            class="gallery-section__photo gallery-section__photo--32"
+                            src="/UNDRCar/assets/photo3-ClwCXdtz.jpg"
+                            alt="photo from our gallery"
+                        />
+
+                        <img
+                            class="gallery-section__photo gallery-section__photo--41"
+                            src="/UNDRCar/assets/photo4-BXmW-3fC.jpg"
+                            alt="photo from our gallery"
+                        />
+                        <img
+                            class="gallery-section__photo gallery-section__photo--42"
+                            src="/UNDRCar/assets/photo4-BXmW-3fC.jpg"
+                            alt="photo from our gallery"
+                        />
+
+                        <img
+                            class="gallery-section__photo gallery-section__photo--51"
+                            src="/UNDRCar/assets/photo2-BrW4d1j-.jpg"
+                            alt="photo from our gallery"
+                        />
+                        <img
+                            class="gallery-section__photo gallery-section__photo--52"
+                            src="/UNDRCar/assets/photo2-BrW4d1j-.jpg"
+                            alt="photo from our gallery"
+                        />
+                    </section>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
