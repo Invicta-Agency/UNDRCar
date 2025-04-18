@@ -14,112 +14,50 @@ let currentBox = 0;
 const horisontalScrollBoxes = document.querySelectorAll(".horisontal-scroll-box");
 const totalHorisontalScrollBoxes = horisontalScrollBoxes.length;
 
-// scrollContainer.addEventListener("wheel", (event) => {
-//     event.preventDefault();
-
-//     if (scrollContainer.scrollLeft !== currentBox * window.innerWidth || menuIsShown) return;
-
-//     const horisontalBoxElement = horisontalScrollBoxes[currentBox];
-//     const verticalBoxElement = horisontalBoxElement.querySelector(".vertical-scroll-box");
-
-//     if (!menuIsShown) {
-//         if (event.deltaY > 0) {
-//             if (verticalBoxElement) {
-//                 if (verticalBoxElement.scrollTop + verticalBoxElement.clientHeight >= verticalBoxElement.scrollHeight) {
-//                     if (currentBox < totalHorisontalScrollBoxes - 1) {
-//                         currentBox++;
-//                     }
-//                 } else {
-//                     verticalBoxElement.scrollTop += 400;
-//                 }
-//             } else if (currentBox < totalHorisontalScrollBoxes - 1) {
-//                 currentBox++;
-//             }
-//             gsap.to(".menu-section", { left: "-25%", duration: 0.9, ease: "circ" });
-//         } else {
-//             if (verticalBoxElement) {
-//                 if (verticalBoxElement.scrollTop > 0) {
-//                     verticalBoxElement.scrollTop -= 400;
-//                 } else {
-//                     if (currentBox > 0) {
-//                         currentBox--;
-//                     }
-//                 }
-//             } else if (currentBox > 0) {
-//                 currentBox--;
-//             }
-//             gsap.to(".menu-section", { left: "1.18vh", duration: 0.9, ease: "circ" });
-//         }
-//     }
-
-//     const targetScrollLeft = currentBox * window.innerWidth;
-
-//     gsap.to(scrollContainer, {
-//         scrollTo: { x: targetScrollLeft },
-//         duration: 0.6,
-//         ease: "circ",
-//     });
-// });
-
-let isScrolling = false;
-
 scrollContainer.addEventListener("wheel", (event) => {
-    if (isScrolling) return;
-    isScrolling = true;
+    event.preventDefault();
 
-    requestAnimationFrame(() => {
-        event.preventDefault();
+    if (scrollContainer.scrollLeft !== currentBox * window.innerWidth || menuIsShown) return;
 
-        if (scrollContainer.scrollLeft !== currentBox * window.innerWidth || menuIsShown) {
-            isScrolling = false;
-            return;
-        }
+    const horisontalBoxElement = horisontalScrollBoxes[currentBox];
+    const verticalBoxElement = horisontalBoxElement.querySelector(".vertical-scroll-box");
 
-        const horisontalBoxElement = horisontalScrollBoxes[currentBox];
-        const verticalBoxElement = horisontalBoxElement.querySelector(".vertical-scroll-box");
-
-        if (!menuIsShown) {
-            if (event.deltaY > 0) {
-                if (verticalBoxElement) {
-                    if (
-                        verticalBoxElement.scrollTop + verticalBoxElement.clientHeight >=
-                        verticalBoxElement.scrollHeight
-                    ) {
-                        if (currentBox < totalHorisontalScrollBoxes - 1) {
-                            currentBox++;
-                        }
-                    } else {
-                        verticalBoxElement.scrollTop += 400;
+    if (!menuIsShown) {
+        if (event.deltaY > 0) {
+            if (verticalBoxElement) {
+                if (verticalBoxElement.scrollTop + verticalBoxElement.clientHeight >= verticalBoxElement.scrollHeight) {
+                    if (currentBox < totalHorisontalScrollBoxes - 1) {
+                        currentBox++;
                     }
-                } else if (currentBox < totalHorisontalScrollBoxes - 1) {
-                    currentBox++;
+                } else {
+                    verticalBoxElement.scrollTop += 400;
                 }
-                gsap.to(".menu-section", { x: "-25%", duration: 0.9, ease: "circ" });
-            } else {
-                if (verticalBoxElement) {
-                    if (verticalBoxElement.scrollTop > 0) {
-                        verticalBoxElement.scrollTop -= 400;
-                    } else {
-                        if (currentBox > 0) {
-                            currentBox--;
-                        }
-                    }
-                } else if (currentBox > 0) {
-                    currentBox--;
-                }
-                gsap.to(".menu-section", { x: "1.18vh", duration: 0.9, ease: "circ" });
+            } else if (currentBox < totalHorisontalScrollBoxes - 1) {
+                currentBox++;
             }
+            gsap.to(".menu-section", { left: "-25%", duration: 0.9, ease: "circ" });
+        } else {
+            if (verticalBoxElement) {
+                if (verticalBoxElement.scrollTop > 0) {
+                    verticalBoxElement.scrollTop -= 400;
+                } else {
+                    if (currentBox > 0) {
+                        currentBox--;
+                    }
+                }
+            } else if (currentBox > 0) {
+                currentBox--;
+            }
+            gsap.to(".menu-section", { left: "1.18vh", duration: 0.9, ease: "circ" });
         }
+    }
 
-        const targetScrollLeft = currentBox * window.innerWidth;
+    const targetScrollLeft = currentBox * window.innerWidth;
 
-        gsap.to(scrollContainer, {
-            scrollTo: { x: targetScrollLeft },
-            duration: 0.6,
-            ease: "circ",
-        });
-
-        isScrolling = false;
+    gsap.to(scrollContainer, {
+        scrollTo: { x: targetScrollLeft },
+        duration: 0.6,
+        ease: "circ",
     });
 });
 
