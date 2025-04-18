@@ -13,9 +13,7 @@
         max-width: 0px !important;
     }
 }
-:root {
-    font-size: min(1.25vw, 2.12vh); // 18px
-}
+
 html,
 body {
     @include body-xs-light;
@@ -33,7 +31,7 @@ body {
     overflow-y: hidden;
     // scroll-behavior: smooth;
     // will-change: scroll-position;
-     will-change: transform; // Optimize for animations
+    will-change: transform; // Optimize for animations
     width: 100vw; // Explicit width
     height: 100vh; // Explicit height
 }
@@ -64,7 +62,7 @@ h2 {
 }
 h2 {
     @include header2-text;
-    margin:0;
+    margin: 0;
 }
 h3 {
     @include header3-text;

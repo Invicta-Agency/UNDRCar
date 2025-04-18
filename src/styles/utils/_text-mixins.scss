@@ -47,7 +47,7 @@
 
 @mixin body-xs-light {
     font-family: Alexandria;
-    font-size: 1rem;
+    font-size: min(1.25vw, 2.12vh); // 18px
     font-style: normal;
     font-weight: 300;
     line-height: normal;

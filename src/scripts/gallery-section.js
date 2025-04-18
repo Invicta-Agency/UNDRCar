@@ -13,7 +13,7 @@ const tl1 = gsap
             ease: "linear",
         },
         repeat: -1,
-        repeatDelay: animTotalDuration - 2 * intersectionDuration,
+        // repeatDelay: animTotalDuration - 2 * intersectionDuration,
     })
     .fromTo(".gallery-section__photo--11", { top: "101%" }, { top: "-100%" })
     .fromTo(".gallery-section__photo--21", { top: "101%" }, { top: "-100%" }, "<7.6%")
@@ -30,7 +30,7 @@ const tl2 = gsap
             ease: "linear",
         },
         repeat: -1,
-        repeatDelay: animTotalDuration - 2 * intersectionDuration,
+        // repeatDelay: animTotalDuration - 2 * intersectionDuration,
         delay: animTotalDuration - intersectionDuration,
     })
     .fromTo(".gallery-section__photo--12", { top: "101%" }, { top: "-100%" })

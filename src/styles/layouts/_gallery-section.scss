@@ -1,7 +1,7 @@
 .gallery-footer-wrapper {
     z-index: 5;
     background-color: $black-color;
-    outline:none;
+    outline: none;
 }
 
 .gallery-section {
@@ -35,10 +35,48 @@
 
         h2 {
             text-align: center;
+            max-width: 90.3%;
         }
         p {
-            font-size: 1.33rem;
-            margin-top: 3.5vh;
+            @include body-m-light;
+            margin-top: 4.05%;
+        }
+    }
+    &__button {
+        background: none;
+        border: 1px solid $white-500-color;
+        border-radius: 2.78rem;
+        color: $white-50-color;
+        @include body-xs-light;
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.83rem;
+        margin-top: 14.05%;
+
+        &:hover {
+            border-color: $white-50-color;
+        }
+        &:active {
+            color: $white-300-color;
+            border-color: $white-500-color;
+
+            circle,
+            path {
+                stroke: $white-300-color;
+            }
+        }
+        &:disabled {
+            border-color: $white-500-color;
+            color: $white-500-color;
+            circle,
+            path {
+                stroke: $white-500-color;
+            }
+        }
+        &:focus-visible:not(:active) {
+            border: none;
+            outline: 2px solid $accent-600-color;
         }
     }
 
