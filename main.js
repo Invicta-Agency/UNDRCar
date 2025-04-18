@@ -77,6 +77,11 @@ document.querySelector(".menu-section__about-us").addEventListener("click", () =
 document.querySelector(".menu-section__services").addEventListener("click", () => {
     goToBox(3);
 });
+
+document.querySelector(".menu-section__gallery").addEventListener("click", () => {
+    goToBox(4);
+});
+
 // Update scroll position on window resize
 window.addEventListener("resize", () => {
     const targetScrollLeft = currentBox * window.innerWidth;
@@ -89,6 +94,12 @@ window.addEventListener("resize", () => {
 
 horisontalScrollBoxes.forEach((section, index) => {
     section.addEventListener("focus", () => {
+        if (index > currentBox) {
+            gsap.to(".menu-section", { left: "-25%", duration: 0.9, ease: "circ" });
+        } else if (index < currentBox) {
+            gsap.to(".menu-section", { left: "1.18vh", duration: 0.9, ease: "circ" });
+        }
+
         goToBox(index);
     });
 });
