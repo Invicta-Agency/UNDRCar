@@ -13,9 +13,7 @@
         max-width: 0px !important;
     }
 }
-:root {
-    font-size: min(1.25vw, 2.12vh); // 18px
-}
+
 html,
 body {
     @include body-xs-light;
@@ -31,18 +29,30 @@ body {
 .scroll-container {
     display: flex;
     overflow-y: hidden;
-    scroll-behavior: smooth;
 }
 .horisontal-scroll-box {
     position: sticky;
     left: 0;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
 }
+.vertical-scroll-box {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
 section {
     min-width: 100vw;
     width: 100vw;
     height: 100vh;
 }
 h1 {
+    margin: 0;
+}
+h2 {
+    @include header2-text;
     margin: 0;
 }
 h2 {

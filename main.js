@@ -1,5 +1,7 @@
 import "./src/styles/main.scss";
+import "./src/scripts/gallery-section";
 import "./src/scripts/menu-section";
+import "./src/scripts/services-section";
 import "./src/scripts/statement-section";
 import { menuIsShown } from "./src/scripts/menu-section";
 import { gsap } from "gsap";
@@ -59,7 +61,7 @@ scrollContainer.addEventListener("wheel", (event) => {
     });
 });
 
-const goToSection = (sectionIndex) => {
+const goToBox = (sectionIndex) => {
     currentBox = sectionIndex;
     gsap.to(scrollContainer, {
         scrollTo: { x: currentBox * window.innerWidth },
@@ -69,9 +71,35 @@ const goToSection = (sectionIndex) => {
 };
 
 document.querySelector(".menu-section__about-us").addEventListener("click", () => {
-    goToSection(2);
+    goToBox(2);
 });
 
 document.querySelector(".menu-section__services").addEventListener("click", () => {
-    goToSection(3);
+    goToBox(3);
+});
+
+document.querySelector(".menu-section__gallery").addEventListener("click", () => {
+    goToBox(4);
+});
+
+// Update scroll position on window resize
+window.addEventListener("resize", () => {
+    const targetScrollLeft = currentBox * window.innerWidth;
+    gsap.to(scrollContainer, {
+        scrollTo: { x: targetScrollLeft },
+        duration: 0.6,
+        ease: "circ",
+    });
+});
+
+horisontalScrollBoxes.forEach((section, index) => {
+    section.addEventListener("focus", () => {
+        if (index > currentBox) {
+            gsap.to(".menu-section", { left: "-25%", duration: 0.9, ease: "circ" });
+        } else if (index < currentBox) {
+            gsap.to(".menu-section", { left: "1.18vh", duration: 0.9, ease: "circ" });
+        }
+
+        goToBox(index);
+    });
 });
