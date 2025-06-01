@@ -82,6 +82,11 @@ document.querySelector(".menu-section__gallery").addEventListener("click", () =>
     goToBox(4);
 });
 
+document.querySelector(".footer__start-button").addEventListener("click", () => {
+    gsap.to(".menu-section", { left: "1.18vh", duration: 0.9, ease: "circ" });
+    goToBox(0);
+});
+
 // Update scroll position on window resize
 window.addEventListener("resize", () => {
     const targetScrollLeft = currentBox * window.innerWidth;
