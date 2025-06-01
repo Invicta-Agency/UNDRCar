@@ -12,6 +12,7 @@
         width: 0px !important;
         max-width: 0px !important;
     }
+    user-select: none; /* Prevent text selection */
 }
 
 html,
