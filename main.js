@@ -30,7 +30,7 @@ scrollContainer.addEventListener("wheel", (event) => {
                         currentBox++;
                     }
                 } else {
-                    verticalBoxElement.scrollTop += 400;
+                    verticalBoxElement.scrollTop += 0.47 * window.innerHeight;
                 }
             } else if (currentBox < totalHorisontalScrollBoxes - 1) {
                 currentBox++;
@@ -39,7 +39,7 @@ scrollContainer.addEventListener("wheel", (event) => {
         } else {
             if (verticalBoxElement) {
                 if (verticalBoxElement.scrollTop > 0) {
-                    verticalBoxElement.scrollTop -= 400;
+                    verticalBoxElement.scrollTop -= 0.47 * window.innerHeight;
                 } else {
                     if (currentBox > 0) {
                         currentBox--;
